@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los Productos - Farmacia Cubillos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="catalog-header">
+        <div class="container">
+            <div class="catalog-top">
+                <a href="catalogo.html">
+                    <img src="../images/logo.png" alt="Farmacia Cubillos" class="logo-small">
+                </a>
+                
+                <div class="search-box-catalog">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre" class="search-input" onkeyup="filterProducts()">
+                </div>
+                
+                <div class="header-icons">
+                    <div class="icon-btn" onclick="window.location.href='carrito.html'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <div class="icon-btn" onclick="window.location.href='perfil.html'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="catalog-nav2">
+                <a href="catalogo.html" class="nav-link">Inicio</a>
+                <a href="productos.html" class="nav-link">Todos los Productos</a>
+                <a href="#" class="nav-link">Ofertas</a>
+                <a href="#" class="nav-link">Historial</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <div class="container">
+            <div class="content-layout">
+                <div class="products-section">
+                    <div class="section-header">
+                        <h2>Todos los Productos</h2>
+                    </div>
+
+                    <div class="filters-bar">
+                        <div class="filter-group">
+                            <label>Categoría:</label>
+                            <select id="categoryFilter" onchange="filterProducts()" class="filter-select">
+                                <option value="todos">Todos</option>
+                                <option value="Analgésicos">Analgésicos</option>
+                                <option value="Antibióticos">Antibióticos</option>
+                                <option value="Vitaminas">Vitaminas</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Ordenar por:</label>
+                            <select id="sortFilter" onchange="filterProducts()" class="filter-select">
+                                <option value="nombre-asc">Nombre A-Z</option>
+                                <option value="nombre-desc">Nombre Z-A</option>
+                                <option value="precio-asc">Precio: Menor a Mayor</option>
+                                <option value="precio-desc">Precio: Mayor a Menor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                    </div>
+                </div>
+
+                <aside class="cart-sidebar">
+                    <h3 class="cart-title">Carrito rápido</h3>
+                    <div class="cart-items" id="cart-items">
+                        <p style="color: #999; text-align: center; padding: 20px;">Tu carrito está vacío</p>
+                    </div>
+
+                    <div class="cart-total">
+                        <p class="total-label">Subtotal</p>
+                        <p class="total-amount" id="cart-subtotal">$0</p>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="window.location.href='carrito.html'">Ir al pago</button>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../js/productos.js"></script>
+</body>
+</html>

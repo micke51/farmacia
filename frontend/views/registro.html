@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Farmacia Cubillos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <img src="../images/logo.png" alt="Farmacia Cubillos" class="auth-logo">
+        
+        <h1 class="auth-title">Registrarse</h1>
+        
+        <form class="auth-form">
+            <input type="text" id="name" placeholder="Nombre" class="auth-input" required>
+            <input type="email" id="email" placeholder="Correo electrónico" class="auth-input" required>
+            <input type="password" id="password" placeholder="Contraseña" class="auth-input" required>
+            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" class="auth-input" required>
+            <button type="submit" class="btn btn-primary btn-full">Crear cuenta</button>
+        </form>
+
+        <p style="text-align:center; margin-top: 15px;">
+            ¿Ya tienes cuenta? <a href="login.html" class="auth-link">Inicia sesión</a>
+        </p>
+    </div>
+    <script src="../js/registro.js"></script>
+</body>
+</html>

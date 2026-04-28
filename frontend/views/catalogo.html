@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Farmacia Cubillos</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="catalog-header">
+        <div class="container">
+            <div class="catalog-top">
+                <img src="../images/logo.png" alt="Farmacia Cubillos" class="logo-small">
+                
+                <div class="search-box-catalog">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" placeholder="Buscar por nombre o codigo" class="search-input">
+                </div>
+                
+                <div class="header-icons">
+                    <div class="icon-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <div class="icon-btn" onclick="window.location.href='perfil.html'">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="catalog-nav">
+                <a href="#" class="nav-link">Mis Favoritos</a>
+                <a href="#" class="nav-link">Volver a Comprar</a>
+                <a href="#" class="nav-link">Tiendas Físicas</a>
+                <a href="#" class="nav-link">Ofertas</a>
+                <a href="#" class="nav-link">Historial</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="catalog-main">
+        <div class="container">
+            <div class="content-layout">
+                <div class="products-section">
+                    <div class="banner-promo">
+                        <img src="../images/sueros.png" alt="Promoción" class="promo-image">
+                        <div class="promo-text">
+                            <h3>2x1 en sueros electrolit</h3>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <h2>Medicamentos Recomendados</h2>
+                        <a href="productos.html" class="ver-todo">Ver todo</a>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <img src="../images/acetominofen.png" alt="acetominofen" class="product-image">
+                            <h3 class="product-name">Acetaminofen</h3>
+                            <p class="product-price">$15.900</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Acetaminofen', 15900, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/ibuprofeno.png" alt="Ibuprofeno" class="product-image">
+                            <h3 class="product-name">Ibuprofeno</h3>
+                            <p class="product-price">$13.900</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Ibuprofeno', 13900, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/omeprazol.png" alt="Omeprazol" class="product-image">
+                            <h3 class="product-name">Omeprazol</h3>
+                            <p class="product-price">$15.500</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Omeprazol', 15500, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/hidrocodona.png" alt="hidrocodona" class="product-image">
+                            <h3 class="product-name">Hidrocodona+Acetaminofen</h3>
+                            <p class="product-price">$65.000</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Hidrocodona+Acetaminofen', 65000, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/caja-loratadina.png" alt="Loratadina" class="product-image">
+                            <h3 class="product-name">Loratadina</h3>
+                            <p class="product-price">$5.500</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Loratadina', 5500, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/esomeprazol.png" alt="esomeprazol" class="product-image">
+                            <h3 class="product-name">Esomeprazol</h3>
+                            <p class="product-price">$32.900</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Esomeprazol', 32900, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/naproxeno.png" alt="naproxeno" class="product-image">
+                            <h3 class="product-name">Naproxeno</h3>
+                            <p class="product-price">$10.500</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Naproxeno', 10500, this)">Agregar a carrito</button>
+                        </div>
+
+                        <div class="product-card">
+                            <img src="../images/suero.png" alt="suero" class="product-image">
+                            <h3 class="product-name">Suero electrolit</h3>
+                            <p class="product-price">$7.500</p>
+                            <button class="btn btn-primary btn-small" onclick="addToCart('Suero electrolit', 7500, this)">Agregar a carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="cart-sidebar">
+                    <h3 class="cart-title">Carrito rápido</h3>
+                    <div class="cart-items" id="cart-items">
+                        <p style="color: #999; text-align: center; padding: 20px;">Tu carrito está vacío</p>
+                    </div>
+
+                    <div class="cart-total">
+                        <p class="total-label">Subtotal</p>
+                        <p class="total-amount" id="cart-subtotal">$0</p>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="window.location.href='carrito.html'">Ir al pago</button>
+                </aside>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>
