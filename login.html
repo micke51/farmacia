@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Farmacia Cubillos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <img src="images/logo.png" alt="Farmacia Cubillos" class="auth-logo">
+        
+        <h1 class="auth-title">Iniciar sesión</h1>
+        
+        <form class="auth-form">
+            <input type="email" placeholder="Correo electrónico" class="auth-input" required>
+            <input type="password" placeholder="Contraseña" class="auth-input" required>
+            <button type="submit" class="btn btn-primary btn-full" onclick="window.location.href='catalogo.html'; return false;">Ingresar</button>
+        </form>
+        
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+        
+        <p class="auth-footer">
+            No tienes cuenta? 
+            <a href="registro.html" class="auth-link">Regístrate</a>
+        </p>
+    </div>
+</body>
+</html>
